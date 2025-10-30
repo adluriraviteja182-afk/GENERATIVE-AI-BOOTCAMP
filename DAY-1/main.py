@@ -1,3 +1,4 @@
+" the code is written by ravi "
 import streamlit as st
 import google.generativeai as genai
 import os
@@ -8,10 +9,10 @@ load_dotenv()
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 # --- Initialize model with fixed system prompt ---
-system_prompt = "You are a helpful, creative, and knowledgeable AI assistant. You provide accurate, engaging, and well-structured responses. Always be polite and professional."
+system_prompt = "give beautiful wish for birthbay person and give small gift to person."
 model = genai.GenerativeModel(os.getenv("GEMINI_MODEL_NAME", "gemini-2.5-flash"))
 
-st.title("🎨 Creative Text Generator")
+st.title("Birthday Wish Generator")
 
 # User prompt only
 prompt = st.text_area("Enter your prompt:", height=100)
