@@ -1,3 +1,4 @@
+"This day 2 on plant identifies"
 import streamlit as st
 import google.generativeai as genai
 from PIL import Image
@@ -9,11 +10,11 @@ load_dotenv()
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 # System prompt for image analysis
-system_prompt = "You are a helpful AI assistant that analyzes images. You provide clear, detailed, and accurate descriptions of what you see in images. Be specific about objects, people, settings, colors, and activities. Always be friendly and helpful in your descriptions."
+system_prompt = "Identifies plants and flowers from photos."
 model = genai.GenerativeModel(os.getenv("GEMINI_MODEL_NAME", "gemini-2.5-flash"))
 
 # App Title
-st.title("🖼️ AI Image Caption Generator")
+st.title("Plant Identifier")
 st.markdown("Upload an image and AI will describe what it sees!")
 
 # Simple upload section
